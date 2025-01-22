@@ -15,6 +15,18 @@ const questions = [
         choices: ["gone", "went", "goed", "allé"],
         correctAnswer: "went"
     },
+
+    {
+        question: "What us the past tense of have?(Avoir) ",
+        choices: ["haved","hud","haven","had"],
+        correctAnswer: "had"
+    },
+
+    {
+        question: "What is the past tense of bring?",
+        choices: ["brung","brang","brought","bring"],
+        correctAnswer: "brought"
+    },
 ];
 
 function startQuiz() {
@@ -42,7 +54,9 @@ function checkAnswer(selectedAnswer) {
     const currentQuestion = questions[currentQuestionIndex];
     if (selectedAnswer === currentQuestion.correctAnswer) {
         score++;
+     
     }
+
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showQuestion();
@@ -52,3 +66,7 @@ function checkAnswer(selectedAnswer) {
 }
 
 startButton.addEventListener('click', startQuiz);
+
+
+
+
